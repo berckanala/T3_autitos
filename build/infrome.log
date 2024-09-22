@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.19)  22 SEP 2024 11:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.19)  22 SEP 2024 11:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -410,6 +410,12 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (
 ) [1
 
 {C:/Users/A/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+<fotos/mapa.png, id=17, 261.97874pt x 292.6935pt>
+File: fotos/mapa.png Graphic file (type png)
+<use fotos/mapa.png>
+Package pdftex.def Info: fotos/mapa.png  used on input line 62.
+(pdftex.def)             Requested size: 236.01561pt x 263.69414pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -421,8 +427,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.73 \end{document}
-                    [1] (c:\Users\A\Desktop\Uandes\8vo_semestre\Sistemas de transportes\T3_autitos\build\infrome.aux
+l.81 \end{document}
+                    [1
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.81 \end{document}
+                    <./fotos/mapa.png>] (c:\Users\A\Desktop\Uandes\8vo_semestre\Sistemas de transportes\T3_autitos\build\infrome.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -434,17 +445,17 @@ Package rerunfilecheck Info: File `infrome.out' has not changed.
 (rerunfilecheck)             Checksum: E62C6D918433D5AAD12CD53CDEFE43A7;106.
  ) 
 Here is how much of TeX's memory you used:
- 14618 strings out of 474486
- 231519 string characters out of 5747519
- 1927542 words of memory out of 5000000
- 36738 multiletter control sequences out of 15000+600000
- 560281 words of font info for 51 fonts, out of 8000000 for 9000
+ 14642 strings out of 474486
+ 231847 string characters out of 5747519
+ 1931542 words of memory out of 5000000
+ 36753 multiletter control sequences out of 15000+600000
+ 560477 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,79p,1080b,487s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/A/Desktop/Programar/miketex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/A/Desktop/Programar/miketex/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/A/Desktop/Programar/miketex/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "c:\Users\A\Desktop\Uandes\8vo_semestre\Sistemas de transportes\T3_autitos\build\infrome.pdf" (2 pages, 42961 bytes).
+Output written on "c:\Users\A\Desktop\Uandes\8vo_semestre\Sistemas de transportes\T3_autitos\build\infrome.pdf" (2 pages, 198261 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 3 named destinations out of 1000 (max. 500000)
- 10249 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 40 PDF objects out of 1000 (max. 8388607)
+ 4 named destinations out of 1000 (max. 500000)
+ 10254 words of extra memory for PDF output out of 12000 (max. 10000000)
 

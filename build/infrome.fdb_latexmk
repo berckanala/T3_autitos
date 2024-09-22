@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1727013624.47964 "c:/Users/A/Desktop/Uandes/8vo_semestre/Sistemas de transportes/T3_autitos/infrome.tex" "build/infrome.pdf" "infrome" 1727013625.95612 0
+["pdflatex"] 1727017099.05874 "c:/Users/A/Desktop/Uandes/8vo_semestre/Sistemas de transportes/T3_autitos/infrome.tex" "build/infrome.pdf" "infrome" 1727017100.33718 0
   "C:/Users/A/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1726351554 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/A/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1710856774 24221282 a5876e0c9e755de8e44ee96826d1c75a ""
   "C:/Users/A/Desktop/Programar/miketex/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -75,10 +75,11 @@
   "C:/Users/A/Desktop/Programar/miketex/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/A/Desktop/Programar/miketex/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/A/Desktop/Programar/miketex/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "build/infrome.aux" 1727013625 434 166dfbccb41e56db3c69773a5d0a0be5 "pdflatex"
-  "build/infrome.out" 1727013625 106 e62c6d918433d5aad12cd53cdefe43a7 "pdflatex"
-  "c:/Users/A/Desktop/Uandes/8vo_semestre/Sistemas de transportes/T3_autitos/infrome.tex" 1727013623 1528 7f7ae144d02644aae6efe7336cf593cf ""
-  "infrome.tex" 1727013623 1528 7f7ae144d02644aae6efe7336cf593cf ""
+  "build/infrome.aux" 1727017100 650 086ee97e97acf817704ff3cf46edecf5 "pdflatex"
+  "build/infrome.out" 1727017100 106 e62c6d918433d5aad12cd53cdefe43a7 "pdflatex"
+  "c:/Users/A/Desktop/Uandes/8vo_semestre/Sistemas de transportes/T3_autitos/infrome.tex" 1727017098 3431 6df847ed2f702a050bfe206018f95d4c ""
+  "fotos/mapa.png" 1727016098 193416 3ae7bec6987cb520a01ae5e9f781f7e2 ""
+  "infrome.tex" 1727017098 3431 6df847ed2f702a050bfe206018f95d4c ""
   (generated)
   "build/infrome.aux"
   "build/infrome.log"
