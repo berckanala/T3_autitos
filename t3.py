@@ -115,16 +115,16 @@ matrix = pd.DataFrame(data).drop(columns="Zona O\\D").astype(float).values
 
 
 # Extraer los vectores Oi y Dj de 'data3'
-O = pd.DataFrame(data3).set_index("Zona").loc["Oi,2024"].values
-D = pd.DataFrame(data3).set_index("Zona").loc["Dj,2024"].values
+O2024 = pd.DataFrame(data3).set_index("Zona").loc["Oi,2024"].values
+D2024 = pd.DataFrame(data3).set_index("Zona").loc["Dj,2024"].values
 
 
 # Asegurarse de que las dimensiones coincidan
-if matrix.shape[0] != len(O) or matrix.shape[1] != len(D):
+if matrix.shape[0] != len(O2024) or matrix.shape[1] != len(D2024):
     raise ValueError("Las dimensiones de la matriz y los vectores O y D no coinciden.")
 
 # Aplicar el algoritmo Furness
-resultado = furness(matrix, O, D)
+resultado = furness(matrix, O2024, D2024)
 
 # Convertir el resultado en un DataFrame para agregar la fila y columna de sumas
 resultado_df = pd.DataFrame(resultado, index=df1_1.index, columns=df1_1.columns)
@@ -195,4 +195,12 @@ mse = np.mean((Tij_df - df1_1) ** 2)
 
 # Mostrar el resultado del MSE
 print(f"El error cuadrático medio (MSE) es: {mse:.4f}")
+
+#--------------------------------------------------------------------------------
+Tij=pd.DataFrame(Tij_df).drop(columns="Zona O\\D").astype(float).values
+
+
+resultado = furness(Tij, O2024, D2024)
+
+
 
