@@ -197,10 +197,28 @@ mse = np.mean((Tij_df - df1_1) ** 2)
 print(f"El error cuadrático medio (MSE) es: {mse:.4f}")
 
 #--------------------------------------------------------------------------------
-Tij=pd.DataFrame(Tij_df).drop(columns="Zona O\\D").astype(float).values
+# Eliminar la última fila y columna de Tij_df
+df = Tij_df.iloc[:-1, :-1]
 
+# No intentes eliminar la columna "Zona O\\D" si ya no existe en el DataFrame
+# Si solo deseas convertir el DataFrame a una matriz numérica para usar en el algoritmo Furness:
+Tij = df.astype(float).values
 
+# Ahora aplica el algoritmo Furness
 resultado = furness(Tij, O2024, D2024)
+
+# Mostrar el resultado en formato DataFrame para verificar
+resultado_df = pd.DataFrame(resultado, index=df.index, columns=df.columns)
+
+row_sums = resultado_df.sum(axis=1)
+col_sums = resultado_df.sum(axis=0)
+resultado_df['Oi,2024'] = row_sums
+total_column = pd.concat([col_sums, pd.Series(row_sums.sum(), index=['Oi,2024'])])
+resultado_df.loc['Dj, 2024'] = total_column
+
+
+print("Resultado después de aplicar Furness:\n", resultado_df)
+
 
 
 
