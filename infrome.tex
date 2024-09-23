@@ -101,8 +101,6 @@ Para esta tarea, se generarán 3 matrices origen-destino en base a esta zonifica
 
 \section{Resultados y Discusiones}
 Los cálculos se realizaron en Python, utilizando las librerías Pandas y Numpy. El código se encuentra en el repositorio de GitHub \href{https://github.com/berckanala/T3_autitos/blob/main/t3.py}{Código}
-\subsection{Matriz Origen-Destino con el Método Furness}
-Para poder generar la Matriz Origen-Destino con el método Furness, se utilizó de base la Matriz Origen-Destino de 2012 (Tabla \ref{table:data_matrix}) y los vectores de origen y destino de 2024 (Tabla \ref{table:oi_dj_2024}). 
 
 
     
@@ -143,27 +141,32 @@ En donde, $t$ es la matriz origen-destino de 2012, $O$ es el vector origen de 20
 
 \newpage
 
+
+
+
 \begin{table}[h!]
     \centering
     \resizebox{\textwidth}{!}{%
-    \begin{tabular}{c|ccccccccccc}
+    \begin{tabular}{c|cccccccccc|c}
     \textbf{Zona O\textbackslash D} & \textbf{301} & \textbf{302} & \textbf{308} & \textbf{314} & \textbf{316} & \textbf{318} & \textbf{E1} & \textbf{E2} & \textbf{E3} & \textbf{E4} & \textbf{Oi,2024} \\ \hline
-    \textbf{301} & 0.00 & 345.54 & 0.00 & 0.00 & 0.00 & 0.00 & 1503.36 & 0.00 & 1685.14 & 4666.00 & 8200.04 \\ 
-    \textbf{302} & 0.00 & 527.75 & 0.00 & 0.00 & 389.22 & 0.00 & 1543.41 & 0.00 & 7356.23 & 6175.42 & 15992.03 \\
-    \textbf{308} & 0.00 & 0.00 & 66.62 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 3228.47 & 3733.81 & 7028.91 \\ 
-    \textbf{314} & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 2337.00 & 0.00 & 0.00 & 2337.00 \\ 
-    \textbf{316} & 0.00 & 589.60 & 0.00 & 0.00 & 0.00 & 0.07 & 144.23 & 0.00 & 2970.15 & 985.77 & 4689.82 \\ 
-    \textbf{318} & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
-    \textbf{E1} & 1244.34 & 787.18 & 287.07 & 4.91 & 287.66 & 0.30 & 0.00 & 0.00 & 0.00 & 0.00 & 2611.46 \\ 
-    \textbf{E2} & 0.00 & 682.56 & 0.00 & 0.35 & 269.90 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 952.80 \\
-    \textbf{E3} & 160.43 & 959.73 & 1373.06 & 6.03 & 724.61 & 0.19 & 0.00 & 0.00 & 0.00 & 0.00 & 3224.05 \\ 
-    \textbf{E4} & 339.22 & 1843.65 & 3268.25 & 8.71 & 629.62 & 0.43 & 0.00 & 0.00 & 0.00 & 0.00 & 6089.88 \\ 
-    \textbf{Dj, 2024} & 1744.00 & 5736.00 & 4995.00 & 20.00 & 2301.00 & 1.00 & 3191.00 & 2337.00 & 15240.00 & 15561.00 & 51126.00 \\ 
+    \textbf{301} & 1769.57 & 1711.94 & 718.07 & 165.67 & 168.13 & 673.27 & 14.37 & 26.68 & 23.47 & 5.16 & 5276.34 \\ 
+    \textbf{302} & 1121.59 & 8553.99 & 998.23 & 886.17 & 868.97 & 1096.17 & 52.78 & 56.97 & 121.49 & 22.98 & 13779.36 \\ 
+    \textbf{308} & 1214.39 & 2576.79 & 2454.49 & 992.53 & 592.42 & 421.78 & 47.22 & 37.90 & 165.91 & 27.28 & 8530.71 \\ 
+    \textbf{314} & 2.06 & 16.79 & 7.28 & 17.27 & 4.70 & 1.39 & 0.45 & 0.29 & 0.61 & 0.15 & 50.99 \\ 
+    \textbf{316} & 331.60 & 2615.88 & 690.87 & 747.41 & 596.06 & 211.67 & 33.47 & 31.88 & 46.06 & 10.93 & 5315.82 \\ 
+    \textbf{318} & 0.55 & 1.37 & 0.20 & 0.09 & 0.09 & 0.56 & 0.01 & 0.01 & 0.01 & 0.00 & 2.90 \\ 
+    \textbf{E1} & 8.69 & 48.74 & 16.89 & 22.02 & 10.27 & 5.28 & 0.00 & 0.00 & 0.00 & 0.00 & 111.89 \\ 
+    \textbf{E2} & 32.38 & 105.53 & 27.19 & 28.30 & 19.62 & 14.52 & 0.00 & 0.00 & 0.00 & 0.00 & 227.53 \\ 
+    \textbf{E3} & 67.56 & 533.80 & 282.39 & 141.15 & 67.23 & 39.83 & 0.00 & 0.00 & 0.00 & 0.00 & 1131.96 \\ 
+    \textbf{E4} & 8.03 & 54.58 & 25.10 & 18.88 & 8.62 & 5.26 & 0.00 & 0.00 & 0.00 & 0.00 & 120.48 \\ \hline
+    \textbf{Dj, 2024} & 4556.42 & 16219.41 & 5220.74 & 3019.51 & 2336.11 & 2469.72 & 148.29 & 153.73 & 357.56 & 66.51 & 34548.00 \\
     \end{tabular}%
     }
-    \caption{Matriz Origen-Destino de 2024 con el método Furness.}
-    \label{table:oi_dj_2024_rounded_2dp}
+    \caption{Tabla de resultados entre zonas}
+    \label{table:results_zones}
 \end{table}
+
+
     
 Como se puede apreciar, la matriz obtenida no se igualó en columna Oi,2024 del vector de origen de 2024, pero sí el de Dj,2024. Esto se debe a que la fila de 318 no tiene viajes de origen, por lo que es imposible que se pueda llegar a la cantidad establecida en el vector de la tabla \ref{table:oi_dj_2024}. Esto repercute en el resto de la matriz, ya que al iterar, la fila de 318 no se modifica, lo que afecta a las demás filas.
 
@@ -185,29 +188,31 @@ Donde:
 \end{itemize}
 
 
-Luego de calcular la matriz de viajes, con un $\alpha$ igual a 0.0002 y un k igual a 1
+Luego de calcular la matriz de viajes, con un $\alpha$ igual a 0.00022 y un k igual a 1
 \newpage
+
 \begin{table}[h!]
     \centering
     \resizebox{\textwidth}{!}{%
     \begin{tabular}{c|ccccccccccc}
     \textbf{Zona O\textbackslash D} & \textbf{301} & \textbf{302} & \textbf{308} & \textbf{314} & \textbf{316} & \textbf{318} & \textbf{E1} & \textbf{E2} & \textbf{E3} & \textbf{E4} & \textbf{Oi,2024} \\ \hline
-    \textbf{301} & 394.66 & 5226.93 & 1499.56 & 1429.52 & 739.23 & 356.11 & 1208.32 & 631.28 & 1639.95 & 1179.97 & 14305.53 \\ 
-    \textbf{302} & 3424.46 & 13095.60 & 6443.93 & 3896.18 & 1886.55 & 1703.88 & 4011.18 & 1909.91 & 5919.04 & 4478.56 & 46769.28 \\ 
-    \textbf{308} & 2536.04 & 16633.99 & 3421.34 & 2900.77 & 1731.41 & 2007.81 & 3427.09 & 1535.92 & 5417.51 & 4475.28 & 44087.17 \\ 
-    \textbf{314} & 17.74 & 73.82 & 21.29 & 6.51 & 6.56 & 10.83 & 19.98 & 7.95 & 25.11 & 23.13 & 212.91 \\ 
-    \textbf{316} & 1457.93 & 5679.12 & 2019.14 & 1041.82 & 521.16 & 897.38 & 1788.74 & 763.11 & 2268.53 & 1921.72 & 18358.65 \\ 
-    \textbf{318} & 0.29 & 2.14 & 0.97 & 0.72 & 0.37 & 0.13 & 0.61 & 0.31 & 0.82 & 0.62 & 6.98 \\ 
-    \textbf{E1} & 731.01 & 3703.98 & 1225.96 & 973.71 & 548.70 & 450.59 & NaN & NaN & NaN & NaN & 7633.95 \\ 
-    \textbf{E2} & 766.05 & 3537.55 & 1102.08 & 777.63 & 469.53 & 461.63 & NaN & NaN & NaN & NaN & 7114.48 \\ 
-    \textbf{E3} & 4720.63 & 26006.23 & 9221.03 & 5822.74 & 3310.98 & 2884.16 & NaN & NaN & NaN & NaN & 51965.78 \\ 
-    \textbf{E4} & 1836.03 & 10636.64 & 4117.56 & 2899.79 & 1516.16 & 1174.92 & NaN & NaN & NaN & NaN & 22181.10 \\ 
-    \textbf{Dj, 2024} & 15884.85 & 84596.00 & 29072.87 & 19749.39 & 10730.65 & 9947.44 & 10455.92 & 4848.49 & 15270.95 & 12079.28 & 212635.84 \\ 
-    \end{tabular}
+    \textbf{301} & 357.39 & 228.48 & 207.35 & 0.25 & 58.10 & 0.13 & 669.68 & 773.91 & 2567.63 & 2874.08 & 7737.00 \\ 
+    \textbf{302} & 106.28 & 535.61 & 135.24 & 0.63 & 140.87 & 0.10 & 1154.28 & 775.35 & 6235.52 & 6005.13 & 15089.00 \\ 
+    \textbf{308} & 42.64 & 59.78 & 123.21 & 0.26 & 35.58 & 0.01 & 382.63 & 191.11 & 3155.20 & 2641.57 & 6632.00 \\ 
+    \textbf{314} & 5.14 & 27.75 & 26.05 & 0.33 & 20.13 & 0.00 & 260.86 & 103.99 & 824.66 & 1039.08 & 2308.00 \\ 
+    \textbf{316} & 20.53 & 107.03 & 61.16 & 0.35 & 63.14 & 0.01 & 478.34 & 283.50 & 1544.91 & 1866.02 & 4425.00 \\ 
+    \textbf{318} & 81.94 & 134.57 & 43.40 & 0.10 & 22.35 & 0.08 & 245.21 & 209.14 & 912.08 & 1135.13 & 2784.00 \\ 
+    \textbf{E1} & 258.69 & 958.59 & 718.82 & 4.93 & 522.82 & 0.15 & 0.00 & 0.00 & 0.00 & 0.00 & 2464.00 \\ 
+    \textbf{E2} & 166.54 & 358.69 & 199.99 & 1.10 & 172.61 & 0.07 & 0.00 & 0.00 & 0.00 & 0.00 & 899.00 \\ 
+    \textbf{E3} & 218.60 & 1141.31 & 1306.37 & 3.44 & 372.15 & 0.12 & 0.00 & 0.00 & 0.00 & 0.00 & 3042.00 \\ 
+    \textbf{E4} & 486.25 & 2184.19 & 2173.40 & 8.61 & 893.25 & 0.31 & 0.00 & 0.00 & 0.00 & 0.00 & 5746.00 \\ \hline
+    \textbf{Dj, 2024} & 1744.00 & 5736.00 & 4995.00 & 20.00 & 2301.00 & 1.00 & 3191.00 & 2337.00 & 15240.00 & 15561.00 & 51126.00 \\
+    \end{tabular}%
     }
-    \caption{Matriz de viajes obtenida con el modelo gravitacional.}
-    \label{table:matrix_nan_sums_corrected}
+    \caption{Tabla de resultados entre zonas}
+    \label{table:results_zones1}
 \end{table}
+
     
 Luego, se obtuvo una matriz la cual se le calculó el error cuadrático medio respecto a la original con el siguiente código:
 
@@ -216,7 +221,7 @@ Luego, se obtuvo una matriz la cual se le calculó el error cuadrático medio re
     mse = np.mean((Tij_df - df1_1) ** 2)
 \end{lstlisting}
 
-En donde, $Tij\_df$ es la matriz de viajes obtenida y $df1\_1$ es la matriz original. Se obtuvo un error cuadrático medio de 13711172.376, lo que indica que la matriz obtenida no es precisa respecto a la original. Por esta razón se fue modificando el valor de k para minimizar el error, se ocupó un k de 0.001 obteniendo un error de 1968630.51. 
+En donde, $Tij\_df$ es la matriz de viajes obtenida y $df1\_1$ es la matriz original. Se obtuvo un error cuadrático medio de 835858.753, lo que indica que la matriz obtenida no es precisa respecto a la original. Por esta razón se fue modificando el valor de k para minimizar el error, se ocupó un k de 0.001 obteniendo un error de 821495.545 y un alpha de 0.00011. 
 
 \subsection{Calibración de la Matriz Origen-Destino con el Modelo Gravitacional}
 
@@ -226,24 +231,24 @@ Para poder obtener esta matriz, lo que se hizo fue con la matriz obtenido anteri
     \centering
     \resizebox{\textwidth}{!}{%
     \begin{tabular}{c|ccccccccccc}
-    
     \textbf{Zona O\textbackslash D} & \textbf{301} & \textbf{302} & \textbf{308} & \textbf{314} & \textbf{316} & \textbf{318} & \textbf{E1} & \textbf{E2} & \textbf{E3} & \textbf{E4} & \textbf{Oi,2024} \\ \hline
-    \textbf{301} & 121.45 & 257.94 & 205.80 & 0.53 & 83.77 & 0.07 & 676.48 & 658.35 & 2830.91 & 2901.71 & 7737.00 \\ 
-    \textbf{302} & 142.46 & 455.73 & 251.41 & 1.02 & 151.92 & 0.09 & 1180.06 & 836.05 & 6111.30 & 5958.95 & 15089.00 \\ 
-    \textbf{308} & 53.60 & 118.55 & 120.62 & 0.39 & 50.51 & 0.03 & 433.54 & 256.99 & 2870.58 & 2727.19 & 6632.00 \\ 
-    \textbf{314} & 12.96 & 44.74 & 36.40 & 0.17 & 19.43 & 0.01 & 227.24 & 113.43 & 830.97 & 1022.65 & 2308.00 \\ 
-    \textbf{316} & 34.71 & 113.98 & 80.36 & 0.33 & 45.39 & 0.02 & 430.84 & 271.41 & 1599.70 & 1848.25 & 4425.00 \\ 
-    \textbf{318} & 41.76 & 105.47 & 63.33 & 0.20 & 30.80 & 0.03 & 242.84 & 200.77 & 996.54 & 1102.26 & 2784.00 \\ 
-    \textbf{E1} & 301.57 & 952.48 & 742.11 & 4.18 & 463.48 & 0.17 & 0.00 & 0.00 & 0.00 & 0.00 & 2464.00 \\ 
-    \textbf{E2} & 154.99 & 356.35 & 232.30 & 1.10 & 154.18 & 0.07 & 0.00 & 0.00 & 0.00 & 0.00 & 899.00 \\ 
-    \textbf{E3} & 298.87 & 1168.15 & 1163.66 & 3.62 & 407.54 & 0.17 & 0.00 & 0.00 & 0.00 & 0.00 & 3042.00 \\ 
-    \textbf{E4} & 581.63 & 2162.59 & 2098.99 & 8.45 & 893.99 & 0.35 & 0.00 & 0.00 & 0.00 & 0.00 & 5746.00 \\ 
-    \textbf{Dj, 2024} & 1744.00 & 5736.00 & 4995.00 & 20.00 & 2301.00 & 1.00 & 3191.00 & 2337.00 & 15240.00 & 15561.00 & 51126.00 \\ 
-    \end{tabular}
+    \textbf{301} & 121.75 & 257.92 & 205.84 & 0.53 & 83.72 & 0.07 & 676.48 & 658.58 & 2830.41 & 2901.70 & 7737.00 \\ 
+    \textbf{302} & 142.42 & 455.94 & 251.14 & 1.02 & 151.92 & 0.09 & 1180.01 & 835.93 & 6111.53 & 5959.00 & 15089.00 \\ 
+    \textbf{308} & 53.59 & 118.41 & 120.65 & 0.39 & 50.48 & 0.03 & 433.44 & 256.84 & 2871.15 & 2727.03 & 6632.00 \\ 
+    \textbf{314} & 12.94 & 44.70 & 36.38 & 0.17 & 19.44 & 0.01 & 227.30 & 113.41 & 830.96 & 1022.68 & 2308.00 \\ 
+    \textbf{316} & 34.69 & 113.99 & 80.33 & 0.33 & 45.43 & 0.02 & 430.93 & 271.43 & 1599.58 & 1848.27 & 4425.00 \\ 
+    \textbf{318} & 41.83 & 105.54 & 63.29 & 0.20 & 30.78 & 0.03 & 242.85 & 200.79 & 996.36 & 1102.33 & 2784.00 \\ 
+    \textbf{E1} & 301.52 & 952.47 & 742.06 & 4.18 & 463.59 & 0.17 & 0.00 & 0.00 & 0.00 & 0.00 & 2464.00 \\ 
+    \textbf{E2} & 155.03 & 356.35 & 232.23 & 1.10 & 154.21 & 0.07 & 0.00 & 0.00 & 0.00 & 0.00 & 899.00 \\ 
+    \textbf{E3} & 298.73 & 1168.09 & 1163.94 & 3.62 & 407.46 & 0.17 & 0.00 & 0.00 & 0.00 & 0.00 & 3042.00 \\ 
+    \textbf{E4} & 581.50 & 2162.59 & 2099.13 & 8.45 & 893.97 & 0.35 & 0.00 & 0.00 & 0.00 & 0.00 & 5746.00 \\ \hline
+    \textbf{Dj, 2024} & 1744.00 & 5736.00 & 4995.00 & 20.00 & 2301.00 & 1.00 & 3191.00 & 2337.00 & 15240.00 & 15561.00 & 51126.00 \\
+    \end{tabular}%
     }
-    \caption{Matriz de viajes calibrada con el método Furness.}
-    \label{table:rounded_data}
+    \caption{Tabla de resultados entre zonas}
+    \label{table:results_zones3}
 \end{table}
+
     
 
 \newpage

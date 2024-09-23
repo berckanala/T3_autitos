@@ -25,11 +25,11 @@ def furness(t, O, D, tol=1e-6, maxit=1000):
         
         if np.max(np.abs(row_sums_after - O.squeeze())) < tol and \
            np.max(np.abs(col_sums_after - D)) < tol:
-            print(f"Convergencia alcanzada en {iters + 1} iteraciones.")
+            #print(f"Convergencia alcanzada en {iters + 1} iteraciones.")
             break
         iters += 1
-    if iters == maxit:
-        print("Advertencia: se alcanzó el número máximo de iteraciones sin convergencia.")
+    #if iters == maxit:
+        #print("Advertencia: se alcanzó el número máximo de iteraciones sin convergencia.")
     return t
 
 # Crear los datos de las tablas
@@ -124,16 +124,13 @@ resultado_df.loc['Dj, 2024'] = total_column
 
 #--------------------------------------------------------------------
 
-
 # Parámetros dados
 beta = 0.2176
-
-k = 0.1
+k=1
 
 # Ejemplo de DataFrames de entrada (asegúrate de que cost_df y df1_1 estén previamente definidos)
 # cost_df: DataFrame con la matriz de costos (Cij)
 # df1_1: DataFrame con la matriz EODij
-
 # Inicializar una lista vacía para almacenar los resultados
 Tij_list = []
 O = pd.DataFrame(data4).set_index("Zona").loc["Oi,2012"].values
@@ -147,68 +144,65 @@ for i in range(10):  # Asumiendo que hay 10 zonas (ajusta si es necesario)
         Tij =  O[i]*D[j] * (cij ** -k) * np.exp(-beta * cij)  # Cálculo de Tij
         row.append(Tij)  # Añadir el resultado a la fila
     Tij_list.append(row)  # Añadir la fila a la lista principal
-
 denominador=0
 for i in range(10):  # Asumiendo que hay 10 zonas (ajusta si es necesario)
     for j in range(10):
         denominador += Tij_list[i][j]
 numerador = O.sum()
-
 alpha= numerador/denominador
-
+#print("Alpha: ", alpha)
 for i in range(10):  # Asumiendo que hay 10 zonas (ajusta si es necesario)
     for j in range(10):
         Tij_list[i][j] = Tij_list[i][j]*alpha
-
 # Convertir la lista a un DataFrame de pandas
 Tij_df = pd.DataFrame(Tij_list, index=cost_df.index, columns=cost_df.columns)
-
 row_sums = Tij_df.sum(axis=1)
 col_sums = Tij_df.sum(axis=0)
 Tij_df['Oi,2024'] = row_sums
 total_column = pd.concat([col_sums, pd.Series(row_sums.sum(), index=['Oi,2024'])])
 Tij_df.loc['Dj, 2024'] = total_column
-# Mostrar el DataFrame resultante
-print("Resultado después de matriz gravitacional:\n", Tij_df)
+    # Mostrar el DataFrame resultante
+print("La matriz global\n",Tij_df)
 
-
-
-#--------------------------------------------------------------------------------
-# Eliminar la última fila y columna de Tij_df
+    #--------------------------------------------------------------------------------
+    # Eliminar la última fila y columna de Tij_df
 df = Tij_df.iloc[:-1, :-1]
 
-# No intentes eliminar la columna "Zona O\\D" si ya no existe en el DataFrame
-# Si solo deseas convertir el DataFrame a una matriz numérica para usar en el algoritmo Furness:
+    # No intentes eliminar la columna "Zona O\\D" si ya no existe en el DataFrame
+    # Si solo deseas convertir el DataFrame a una matriz numérica para usar en el algoritmo Furness:
 Tij = df.astype(float).values
 
-# Ahora aplica el algoritmo Furness
+    # Ahora aplica el algoritmo Furness
 resultado = furness(Tij, O2024, D2024)
 
-# Mostrar el resultado en formato DataFrame para verificar
+    # Mostrar el resultado en formato DataFrame para verificar
 resultado_df = pd.DataFrame(resultado, index=df.index, columns=df.columns)
-
-
-#--------------------------------------------------------------------------------
-# Reemplazar NaN por 0 en Tij_df
-Tij_df = Tij_df.fillna(0)
-# Reemplazar NaN por 0 en df1_1 (por si acaso contiene NaN también)
-df1_1 = df1_1.fillna(0)
-# Ahora puedes continuar con el cálculo del MSE
-mse = np.mean((Tij_df - df1_1) ** 2)/100
-
-# Mostrar el resultado del MSE
-print(f"El error cuadrático medio (MSE) es: {mse:.4f}")
-
-#--------------------------------------------------------------------------------
-
 row_sums = resultado_df.sum(axis=1)
 col_sums = resultado_df.sum(axis=0)
+
+# Agregar las sumas como la última fila y columna
 resultado_df['Oi,2024'] = row_sums
 total_column = pd.concat([col_sums, pd.Series(row_sums.sum(), index=['Oi,2024'])])
-resultado_df.loc['Dj, 2024'] = total_column
+resultado_df.loc['Dj, 2024'] = total_column 
+
+print("K:", k)
+print("Alpha:", alpha)
+
+print("La matriz después del furness\n", resultado_df)
+
+    #--------------------------------------------------------------------------------
+    
+    # Reemplazar NaN por 0 en Tij_df
+Tij_df = Tij_df.fillna(0)
+    # Reemplazar NaN por 0 en df1_1 (por si acaso contiene NaN también)
+df1_1 = df1_1.fillna(0)
+    # Ahora puedes continuar con el cálculo del MSE
+mse = np.mean((resultado_df - df1_1) ** 2)
+print("MSE:", mse)
+
+#--------------------------------------------------------------------------------
 
 
-print("Resultado después de aplicar Furness:\n", resultado_df)
 
 
 
