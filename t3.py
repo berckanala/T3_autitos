@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-def furness(t, O, D, tol=1e-6, maxit=1000):  # Incrementé maxit para más iteraciones posibles
+def furness(t, O, D, tol=1e-6, maxit=1000):  
     k = len(O)
     O = np.array(O)[:, np.newaxis].astype(float)
     D = np.array(D).astype(float)
@@ -9,29 +9,17 @@ def furness(t, O, D, tol=1e-6, maxit=1000):  # Incrementé maxit para más itera
     ai = np.ones((k, 1))
     bj = np.ones((1, k))
     iters = 0
-    
     while iters < maxit:
-        # Sumar filas y columnas
         row_sums = t.sum(axis=1)
         col_sums = t.sum(axis=0)
-        
-        # Evitar divisiones por cero reemplazando 0 por 1 en las sumas
         row_sums[row_sums == 0] = 1
         col_sums[col_sums == 0] = 1
-        
-        # Calcular ai y ajustar la matriz t
         ai = O / row_sums[:, np.newaxis]
         t = t * ai
-        
-        # Recalcular las sumas de las columnas después del ajuste de las filas
         col_sums = t.sum(axis=0)
         col_sums[col_sums == 0] = 1
-        
-        # Calcular bj y ajustar la matriz t
         bj = D / col_sums
         t = t * bj
-        
-        # Verificación de convergencia
         row_sums_after = t.sum(axis=1)
         col_sums_after = t.sum(axis=0)
         
@@ -39,13 +27,9 @@ def furness(t, O, D, tol=1e-6, maxit=1000):  # Incrementé maxit para más itera
            np.max(np.abs(col_sums_after - D)) < tol:
             print(f"Convergencia alcanzada en {iters + 1} iteraciones.")
             break
-        
         iters += 1
-    
-    # Verificar si se alcanzó la convergencia
     if iters == maxit:
         print("Advertencia: se alcanzó el número máximo de iteraciones sin convergencia.")
-    
     return t
 
 # Crear los datos de las tablas
@@ -149,7 +133,7 @@ print("Resultado final con sumas:\n", resultado_df)
 # Parámetros dados
 beta = 0.2176
 alpha = 0.0002
-k = 0.005
+k = 0.001
 
 # Ejemplo de DataFrames de entrada (asegúrate de que cost_df y df1_1 estén previamente definidos)
 # cost_df: DataFrame con la matriz de costos (Cij)
