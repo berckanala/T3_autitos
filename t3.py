@@ -127,8 +127,8 @@ resultado_df.loc['Dj, 2024'] = total_column
 
 # Parámetros dados
 beta = 0.2176
-alpha = 0.0002
-k = 2.65
+
+k = 0.1
 
 # Ejemplo de DataFrames de entrada (asegúrate de que cost_df y df1_1 estén previamente definidos)
 # cost_df: DataFrame con la matriz de costos (Cij)
@@ -144,11 +144,21 @@ for i in range(10):  # Asumiendo que hay 10 zonas (ajusta si es necesario)
     for j in range(10):
         cij = cost_df.iloc[i, j]  # Costo de la celda i, j
         EODij = df1_1.iloc[i, j]  # Valor de EODij en la celda i, j
-        Tij = alpha * O[i]*D[j] * (cij ** -k) * np.exp(-beta * cij)  # Cálculo de Tij
+        Tij =  O[i]*D[j] * (cij ** -k) * np.exp(-beta * cij)  # Cálculo de Tij
         row.append(Tij)  # Añadir el resultado a la fila
     Tij_list.append(row)  # Añadir la fila a la lista principal
 
+denominador=0
+for i in range(10):  # Asumiendo que hay 10 zonas (ajusta si es necesario)
+    for j in range(10):
+        denominador += Tij_list[i][j]
+numerador = O.sum()
 
+alpha= numerador/denominador
+
+for i in range(10):  # Asumiendo que hay 10 zonas (ajusta si es necesario)
+    for j in range(10):
+        Tij_list[i][j] = Tij_list[i][j]*alpha
 
 # Convertir la lista a un DataFrame de pandas
 Tij_df = pd.DataFrame(Tij_list, index=cost_df.index, columns=cost_df.columns)
@@ -159,18 +169,10 @@ Tij_df['Oi,2024'] = row_sums
 total_column = pd.concat([col_sums, pd.Series(row_sums.sum(), index=['Oi,2024'])])
 Tij_df.loc['Dj, 2024'] = total_column
 # Mostrar el DataFrame resultante
-print(Tij_df)
+print("Resultado después de matriz gravitacional:\n", Tij_df)
 
-#--------------------------------------------------------------------------------
-# Reemplazar NaN por 0 en Tij_df
-Tij_df = Tij_df.fillna(0)
-# Reemplazar NaN por 0 en df1_1 (por si acaso contiene NaN también)
-df1_1 = df1_1.fillna(0)
-# Ahora puedes continuar con el cálculo del MSE
-mse = np.mean((Tij_df - df1_1) ** 2)/100
 
-# Mostrar el resultado del MSE
-print(f"El error cuadrático medio (MSE) es: {mse:.4f}")
+
 #--------------------------------------------------------------------------------
 # Eliminar la última fila y columna de Tij_df
 df = Tij_df.iloc[:-1, :-1]
@@ -184,6 +186,20 @@ resultado = furness(Tij, O2024, D2024)
 
 # Mostrar el resultado en formato DataFrame para verificar
 resultado_df = pd.DataFrame(resultado, index=df.index, columns=df.columns)
+
+
+#--------------------------------------------------------------------------------
+# Reemplazar NaN por 0 en Tij_df
+Tij_df = Tij_df.fillna(0)
+# Reemplazar NaN por 0 en df1_1 (por si acaso contiene NaN también)
+df1_1 = df1_1.fillna(0)
+# Ahora puedes continuar con el cálculo del MSE
+mse = np.mean((Tij_df - df1_1) ** 2)/100
+
+# Mostrar el resultado del MSE
+print(f"El error cuadrático medio (MSE) es: {mse:.4f}")
+
+#--------------------------------------------------------------------------------
 
 row_sums = resultado_df.sum(axis=1)
 col_sums = resultado_df.sum(axis=0)
