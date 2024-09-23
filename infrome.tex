@@ -97,7 +97,7 @@ Con esta información, se pueden generar modelos y tomar decisiones, las cuales 
 
 Para esta tarea, se generarán 3 matrices origen-destino en base a esta zonificación mediante un código Python: una utilizando el método Furness o biproporcional, con datos de los vectores origen-destino de 2024, otra a partir de una matriz de costos, como la distancia promedio de viaje, y el modelo gravitacional. Posteriormente, se calibrará la matriz con el modelo gravitacional y se compararán los resultados obtenidos con un error cuadrático medio respecto a la matriz original. Finalmente, a la matriz calibrada se le aplicará el método de Furness para obtener una matriz de viajes.
 
-\newpage
+
 
 \section{Resultados y Discusiones}
 Los cálculos se realizaron en Python, utilizando las librerías Pandas y Numpy. El código se encuentra en el repositorio de GitHub \href{https://github.com/berckanala/T3_autitos/blob/main/t3.py}{Código}
@@ -119,7 +119,7 @@ Donde:
 \end{itemize}
 
 
-Luego de calcular la matriz de viajes, con un $\alpha$ igual a 0.00022 y un k igual a 1
+Luego de calcular la matriz de viajes, con un $\alpha$ igual a 0.00022 y un k igual a 1 se obtuvo la siguiente matriz:
 
 
 \begin{table}[h!]
@@ -144,15 +144,11 @@ Luego de calcular la matriz de viajes, con un $\alpha$ igual a 0.00022 y un k ig
     \label{table:results_zones}
 \end{table}
 
+Como se puede apreciar, la matriz obtenida no es precisa respecto a la original, ya que los vectores de origen-destino no concuerdan con los obtenidos en la encuesta.
 
-    
-
-
-
-\newpage
 
 \subsection{Implementación del Método Furness}
-
+Para poder mejorar la presición de la matriz obtenida (Tabla \ref{table:results_zones}), se implementó el método Furness, a continuación se muestra la matriz obtenida:
 \begin{table}[h!]
     \centering
     \resizebox{\textwidth}{!}{%
@@ -174,20 +170,25 @@ Luego de calcular la matriz de viajes, con un $\alpha$ igual a 0.00022 y un k ig
     \caption{Tabla de resultados entre zonas}
     \label{table:results_zones1}
 \end{table}
+Como se puede observar, los vectores son más precisos respecto a los obtenidos en la encuesta.
 
-    
-Luego, se obtuvo una matriz la cual se le calculó el error cuadrático medio respecto a la original con el siguiente código:
+Luego, se calculó el error cuadrático medio respecto a la original con el siguiente código:
 
 
 \begin{lstlisting}
     mse = np.mean((Tij_df - df1_1) ** 2)
 \end{lstlisting}
 
-En donde, $Tij\_df$ es la matriz de viajes obtenida y $df1\_1$ es la matriz original. Se obtuvo un error cuadrático medio de 835858.753, lo que indica que la matriz obtenida no es precisa respecto a la original. Por esta razón se fue modificando el valor de k para minimizar el error, se ocupó un k de 0.001 obteniendo un error de 821495.545 y un alpha de 0.00011. 
+Donde:
+\begin{itemize}
+    \item $Tij\_df$ es la matriz de viajes obtenida.
+    \item $df1\_1$ es la matriz original.
+\end{itemize}
+
+El error que se obtuvo fue de 835858.753, por lo que, para minimizar el error, se tiene que modificar el k
 
 \subsection{Calibración de la Matriz Origen-Destino con el Modelo Gravitacional}
-
-Para poder obtener esta matriz, lo que se hizo fue con la matriz obtenido anteriormente (Tabla \ref{table:matrix_nan_sums_corrected}), se le aplicó el método Furness (\ref{lst:furness}), obteniendo una matriz de viajes calibrada. Esta matriz en comparación con las anteriores, se obtuvo un error de 0 en los vectores de la matriz.
+Para poder obtener el k óptimo, se iteró sobre distintos valores de k, obteniendo un error mínimo con un k de 0.001 y un alpha de 0.00011. A continuación, se muestra la matriz obtenida:
 
 \begin{table}[h!]
     \centering
