@@ -167,19 +167,15 @@ Tij_df.loc['Dj, 2024'] = total_column
 print(Tij_df)
 
 #--------------------------------------------------------------------------------
-
 # Reemplazar NaN por 0 en Tij_df
 Tij_df = Tij_df.fillna(0)
-
 # Reemplazar NaN por 0 en df1_1 (por si acaso contiene NaN también)
 df1_1 = df1_1.fillna(0)
-
 # Ahora puedes continuar con el cálculo del MSE
 mse = np.mean((Tij_df - df1_1) ** 2)
 
 # Mostrar el resultado del MSE
 print(f"El error cuadrático medio (MSE) es: {mse:.4f}")
-
 #--------------------------------------------------------------------------------
 # Eliminar la última fila y columna de Tij_df
 df = Tij_df.iloc[:-1, :-1]
