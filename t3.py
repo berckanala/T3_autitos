@@ -67,7 +67,7 @@ data2 = {
 cost_df = pd.DataFrame(data2).set_index("Zona O\\D")
 Cij = cost_df.values
 data3 = {
-    "Zona": ["Oi,2024", "Dj,2024"],
+    "Zona": ["Dj,2024", "Oi,2024"],
     "301": [7737, 1744],
     "302": [15089, 5736],
     "308": [6632, 4995],
@@ -127,30 +127,31 @@ resultado_df.loc['Dj, 2024'] = total_column
 # Parámetros dados
 beta = 0.2176
 k=1
-
-# Ejemplo de DataFrames de entrada (asegúrate de que cost_df y df1_1 estén previamente definidos)
-# cost_df: DataFrame con la matriz de costos (Cij)
-# df1_1: DataFrame con la matriz EODij
-# Inicializar una lista vacía para almacenar los resultados
 Tij_list = []
 O = pd.DataFrame(data4).set_index("Zona").loc["Oi,2012"].values
 D = pd.DataFrame(data4).set_index("Zona").loc["Dj,2012"].values
+
 # Recorrer cada combinación i, j para calcular Tij
 for i in range(10):  # Asumiendo que hay 10 zonas (ajusta si es necesario)
     row = []
     for j in range(10):
         cij = cost_df.iloc[i, j]  # Costo de la celda i, j
+        if cij == np.inf:
+            cij = 1e10
         EODij = df1_1.iloc[i, j]  # Valor de EODij en la celda i, j
-        Tij =  O[i]*D[j] * (cij ** -k) * np.exp(-beta * cij)  # Cálculo de Tij
+        Tij =  O[i]*D[j] * (cij ** k) * np.exp(-beta * cij)  # Cálculo de Tij
         row.append(Tij)  # Añadir el resultado a la fila
     Tij_list.append(row)  # Añadir la fila a la lista principal
+
+
+
 denominador=0
 for i in range(10):  # Asumiendo que hay 10 zonas (ajusta si es necesario)
     for j in range(10):
         denominador += Tij_list[i][j]
 numerador = O.sum()
 alpha= numerador/denominador
-#print("Alpha: ", alpha)
+
 for i in range(10):  # Asumiendo que hay 10 zonas (ajusta si es necesario)
     for j in range(10):
         Tij_list[i][j] = Tij_list[i][j]*alpha
@@ -185,7 +186,7 @@ resultado_df['Oi,2024'] = row_sums
 total_column = pd.concat([col_sums, pd.Series(row_sums.sum(), index=['Oi,2024'])])
 resultado_df.loc['Dj, 2024'] = total_column 
 
-print("K:", k)
+# print("K:", k)
 print("Alpha:", alpha)
 
 print("La matriz después del furness\n", resultado_df)
@@ -198,7 +199,11 @@ Tij_df = Tij_df.fillna(0)
 df1_1 = df1_1.fillna(0)
     # Ahora puedes continuar con el cálculo del MSE
 mse = np.mean((resultado_df - df1_1) ** 2)
-print("MSE:", mse)
+
+print("El error cuadrático medio es:", mse)
+
+    #--------------------------------------------------------------------------------
+    # Calcular el costo total
 
 #--------------------------------------------------------------------------------
 
