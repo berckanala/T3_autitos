@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1727211840.33374 "c:/Users/A/Desktop/Uandes/8vo_semestre/Sistemas de transportes/T3_autitos/infrome.tex" "build/infrome.pdf" "infrome" 1727211842.32541 0
+["pdflatex"] 1727220985.72674 "c:/Users/A/Desktop/Uandes/8vo_semestre/Sistemas de transportes/T3_autitos/informe.tex" "build/informe.pdf" "informe" 1727220988.38081 0
   "C:/Users/A/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1727097588 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/A/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1710856774 24221282 a5876e0c9e755de8e44ee96826d1c75a ""
   "C:/Users/A/Desktop/Programar/miketex/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -110,14 +110,14 @@
   "C:/Users/A/Desktop/Programar/miketex/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/A/Desktop/Programar/miketex/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/A/Desktop/Programar/miketex/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "build/infrome.aux" 1727211842 3850 00dfb2e3e1e3f98b97d04c5cf814263f "pdflatex"
-  "build/infrome.out" 1727211842 1712 3f27529d97531da95d3ab264e216aeb6 "pdflatex"
-  "c:/Users/A/Desktop/Uandes/8vo_semestre/Sistemas de transportes/T3_autitos/infrome.tex" 1727211839 23553 1ed1fd12394943cf33c18659abf054c5 ""
+  "build/informe.aux" 1727220988 3850 ddc92b8bb8b11350890615ec7aff05ff "pdflatex"
+  "build/informe.out" 1727220988 1712 3f27529d97531da95d3ab264e216aeb6 "pdflatex"
+  "c:/Users/A/Desktop/Uandes/8vo_semestre/Sistemas de transportes/T3_autitos/informe.tex" 1727220984 24712 470483733cc9915b92ec68d6078cd3b0 ""
   "fotos/mapa.png" 1727016098 193416 3ae7bec6987cb520a01ae5e9f781f7e2 ""
-  "infrome.tex" 1727211839 23553 1ed1fd12394943cf33c18659abf054c5 ""
+  "informe.tex" 1727220984 24712 470483733cc9915b92ec68d6078cd3b0 ""
   (generated)
-  "build/infrome.aux"
-  "build/infrome.log"
-  "build/infrome.out"
-  "build/infrome.pdf"
+  "build/informe.aux"
+  "build/informe.log"
+  "build/informe.out"
+  "build/informe.pdf"
   (rewritten before read)

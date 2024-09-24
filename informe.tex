@@ -154,7 +154,7 @@ Luego de aplicar la ecuación \ref{eq:alpha}, se obtuvo un  $\alpha$ igual a $3.
     \label{table:global}
   \end{table}
 
-  \noindent La Tabla \ref{table:global} presenta la distribución inicial de viajes entre zonas utilizando el modelo gravitacional. Esta distribución ofrece una primera aproximación de los flujos de viajes, pero aún requiere ajustes adicionales para que refleje con precisión los totales proyectados para el año 2024.
+  \noindent La Tabla \ref{table:global} presenta la distribución inicial de viajes entre zonas utilizando el modelo gravitacional. Esta distribución ofrece una primera aproximación de los flujos de viajes, pero aún requiere ajustes adicionales para que refleje a estos con precisión.
 
 \subsection{Implementación del Método Furness}
 Para poder mejorar la presición de la matriz obtenida (Tabla \ref{table:global}), se implementó el método Furness, este método es un algoritmo iterativo que equilibra la matriz de viajes para que las sumas de sus columnas y filas coincidan con los totales proyectados, manteniendo la distribución proporcional de los viajes según una matriz base. A continuación se muestra la matriz obtenida:
@@ -243,7 +243,7 @@ Para determinar el valor óptimo de \( k \), se realizaron iteraciones sobre dif
     \label{table:calibrada}
   \end{table}
 
-  \noindent Las Tablas \ref{table:calibrada gravitacional} y \ref{table:calibrada} presentan los resultados de la calibración utilizando el modelo gravitacional y la distribución ajustada, respectivamente. Mientras que la primera refleja la estimación de viajes basada en la interacción entre zonas en función de su atractivo y distancia, la segunda incluye ajustes adicionales que se acercan más a los valores observados para 2024. Comparando ambas tablas, se observa que el ajuste introduce correcciones significativas, reduciendo las discrepancias y ofreciendo una proyección más precisa del flujo de viajes.
+  \noindent Las Tablas \ref{table:calibrada gravitacional} y \ref{table:calibrada} presentan los resultados de la calibración utilizando el modelo gravitacional y el método biproporcional, respectivamente. Mientras que la primera refleja la estimación de viajes basada en la interacción entre zonas en función de su atractivo y distancia, la segunda incluye ajustes adicionales que se acercan más a los valores observados para 2024. Comparando ambas tablas, se observa que el ajuste introduce correcciones significativas, reduciendo las discrepancias y ofreciendo una proyección más precisa del flujo de viajes.
 
 
 \subsection{Discusiones}
