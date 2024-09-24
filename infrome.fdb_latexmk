@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1727189524.52727 "c:/Users/pedro/OneDrive/Escritorio/Semestre VIII/Sistemas de Transporte/T3/T3_autitos/infrome.tex" "infrome.pdf" "infrome" 1727189525.79491 0
+["pdflatex"] 1727192768.3075 "c:/Users/pedro/OneDrive/Escritorio/Semestre VIII/Sistemas de Transporte/T3/T3_autitos/infrome.tex" "infrome.pdf" "infrome" 1727192769.69753 0
   "C:/Users/pedro/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1727063478 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/pedro/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1723153580 24265332 a4623d99dbd220d0e817d27477adcb5a ""
   "C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -110,11 +110,11 @@
   "C:/Users/pedro/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/pedro/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/pedro/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/pedro/OneDrive/Escritorio/Semestre VIII/Sistemas de Transporte/T3/T3_autitos/infrome.tex" 1727189523 17605 0fa6c94555e85b976ceec30ba88f7b53 ""
+  "c:/Users/pedro/OneDrive/Escritorio/Semestre VIII/Sistemas de Transporte/T3/T3_autitos/infrome.tex" 1727192767 20800 c38d780c4fee24cf62235c919d766a1c ""
   "fotos/mapa.png" 1727109370 193416 3ae7bec6987cb520a01ae5e9f781f7e2 ""
-  "infrome.aux" 1727189525 3478 795a37a2a510336178c4c0b8c220688d "pdflatex"
-  "infrome.out" 1727189525 1619 bae5bcd416eb5eb0df48e5fdde5304e0 "pdflatex"
-  "infrome.tex" 1727189523 17605 0fa6c94555e85b976ceec30ba88f7b53 ""
+  "infrome.aux" 1727192769 3585 d0a23c03542adc5600396b68f09f87a4 "pdflatex"
+  "infrome.out" 1727192769 1712 3f27529d97531da95d3ab264e216aeb6 "pdflatex"
+  "infrome.tex" 1727192767 20800 c38d780c4fee24cf62235c919d766a1c ""
   (generated)
   "infrome.aux"
   "infrome.log"

@@ -227,6 +227,18 @@ Para determinar el valor óptimo de \( k \), se realizaron iteraciones sobre dif
   
 \subsection{Discusiones}
 
+Luego de aplicar el método de Furness, la matriz se ajusta para que las sumas de las filas y columnas coincidan con los totales proyectados. Esto genera cambios en la matriz, y se observa en las Tablas \ref{table:global} y \ref{table:furness} que las zonas E1, E2, E3 y E4 presentan las mayores diferencias respecto a la matriz original. Esto se debe a que, al ser un método iterativo, es necesario ajustar la matriz para cumplir las restricciones deseadas. Además, al cambiar el valor de $k$, se afectan otras variables como $\alpha$, lo que genera cambios en la función de costos. Un valor de $k$ bajo genera mayor atracción hacia las zonas más cercanas o con un menor costo, esto se puede ver en los viajes de la zona 301 a 301, que tiene un costo de 0.50 que de la tabla 2 a la tabla 3 se ve un aumento significativo. En este caso, las zonas mencionadas tuvieron que ajustarse más significativamente para alinearse con los vectores de destino y origen de 2024.\\
+
+Por otro lado, al comparar la matriz orginal con la matriz final (Tablas \ref{table:data_matrix} y \ref{table:calibrada} respectivamente) se observa que las mismas zonas E1, E2, E3 y E4 son las que mas difieren respecto a las otras zonas. Esto puede deberse a que como se dijo antes el metodo de furness, ademas, del modelo gravitacional son ajustes para lograra una representacion coherente, pero pueden existir diferencias a lo real debiso a que hay factores que no captura este tipo de modelos.\\
+
+Con respecto a las limitaciones que tiene el metodo de Furness y el modelo gravitacional se puede mencionar que este modelo solo considera ciertos impulsos sobre los viajes como lo son el costo y el tamaño de la zona de origen y destino, lo cual puede no captar otros factores importantes como la congestion, cambios de trasporte publico o privado, entre otros. Ademas, e metodo de Furness ajusta de manera proporcional, lo que puede significar que no se refleje con precision los patrones de viaje o los cambios en este. Luego agregar que los parametros como k, pueden variar en el tiempo y zona, por lo que no son del todo correctas en cada ocasion. \\
+
+Finalmente, la matriz modelada para 2024 podria diferir de la realidad debido a que no se consideran factores como la pandemia, cambios en la infraestructura, cambios en la densidad poblacional, entre otros. Por lo que se debe tener en cuenta que estos modelos son una aproximacion y no una representacion exacta de la realidad.
+
+\section{Conclusion}
+
+En este trabajo se generaron matrices origen-destino para la zona de San Carlos de Apoquindo, utilizando el método gravitacional y el método Furness. Se obtuvo una matriz calibrada con el método gravitacional y se comparó con la matriz original, obteniendo un error cuadrático medio de 345361.66. Se concluye que el método Furness es una herramienta útil para ajustar matrices origen-destino y que el modelo gravitacional es una buena aproximación para la distribución de viajes en una ciudad. Sin embargo, se debe tener en cuenta que estos modelos no consideran todos los factores que influyen en la distribución de viajes, por lo que pueden existir diferencias respecto a la realidad.
+
 \newpage
 \section{Anexos}
 \begin{table}[h!]
