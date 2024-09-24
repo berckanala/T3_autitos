@@ -119,57 +119,58 @@ Donde:
 \end{itemize}
 
 
-Luego de calcular la matriz de viajes, con un $\alpha$ igual a 0.00022 y un k igual a 1 se obtuvo la siguiente matriz:
+Luego de calcular la matriz de viajes, con un $\alpha$ igual a $3.249 \cdot 10^{-5}$ y un k igual a 1 se obtuvo la siguiente matriz:
 
 
-\begin{table}[h!]
+\begin{table}[H]
     \centering
     \resizebox{\textwidth}{!}{%
-    \begin{tabular}{c|cccccccccc|c}
+    \begin{tabular}{c|ccccccccccc}    
     \textbf{Zona O\textbackslash D} & \textbf{301} & \textbf{302} & \textbf{308} & \textbf{314} & \textbf{316} & \textbf{318} & \textbf{E1} & \textbf{E2} & \textbf{E3} & \textbf{E4} & \textbf{Oi,2024} \\ \hline
-    \textbf{301} & 1769.57 & 1711.94 & 718.07 & 165.67 & 168.13 & 673.27 & 14.37 & 26.68 & 23.47 & 5.16 & 5276.34 \\ 
-    \textbf{302} & 1121.59 & 8553.99 & 998.23 & 886.17 & 868.97 & 1096.17 & 52.78 & 56.97 & 121.49 & 22.98 & 13779.36 \\ 
-    \textbf{308} & 1214.39 & 2576.79 & 2454.49 & 992.53 & 592.42 & 421.78 & 47.22 & 37.90 & 165.91 & 27.28 & 8530.71 \\ 
-    \textbf{314} & 2.06 & 16.79 & 7.28 & 17.27 & 4.70 & 1.39 & 0.45 & 0.29 & 0.61 & 0.15 & 50.99 \\ 
-    \textbf{316} & 331.60 & 2615.88 & 690.87 & 747.41 & 596.06 & 211.67 & 33.47 & 31.88 & 46.06 & 10.93 & 5315.82 \\ 
-    \textbf{318} & 0.55 & 1.37 & 0.20 & 0.09 & 0.09 & 0.56 & 0.01 & 0.01 & 0.01 & 0.00 & 2.90 \\ 
-    \textbf{E1} & 8.69 & 48.74 & 16.89 & 22.02 & 10.27 & 5.28 & 0.00 & 0.00 & 0.00 & 0.00 & 111.89 \\ 
-    \textbf{E2} & 32.38 & 105.53 & 27.19 & 28.30 & 19.62 & 14.52 & 0.00 & 0.00 & 0.00 & 0.00 & 227.53 \\ 
-    \textbf{E3} & 67.56 & 533.80 & 282.39 & 141.15 & 67.23 & 39.83 & 0.00 & 0.00 & 0.00 & 0.00 & 1131.96 \\ 
-    \textbf{E4} & 8.03 & 54.58 & 25.10 & 18.88 & 8.62 & 5.26 & 0.00 & 0.00 & 0.00 & 0.00 & 120.48 \\ \hline
-    \textbf{Dj, 2024} & 4556.42 & 16219.41 & 5220.74 & 3019.51 & 2336.11 & 2469.72 & 148.29 & 153.73 & 357.56 & 66.51 & 34548.00 \\
-    \end{tabular}%
-    }
-    \caption{Tabla de resultados entre zonas}
-    \label{table:results_zones}
-\end{table}
+    \textbf{301} & 64.1 & 849.2 & 243.6 & 232.3 & 120.1 & 57.9 & 196.3 & 102.6 & 266.5 & 191.7 & 2324.3 \\ 
+    \textbf{302} & 556.4 & 2127.7 & 1047.0 & 633.0 & 306.5 & 276.8 & 651.7 & 310.3 & 961.7 & 727.7 & 7598.8 \\ 
+    \textbf{308} & 412.0 & 2702.6 & 555.9 & 471.3 & 281.3 & 326.2 & 556.8 & 249.5 & 880.2 & 727.1 & 7163.1 \\ 
+    \textbf{314} & 2.9 & 12.0 & 3.5 & 1.1 & 1.1 & 1.8 & 3.2 & 1.3 & 4.1 & 3.8 & 34.6 \\ 
+    \textbf{316} & 236.9 & 922.7 & 328.1 & 169.3 & 84.7 & 145.8 & 290.6 & 124.0 & 368.6 & 312.2 & 2982.8 \\ 
+    \textbf{318} & 0.0 & 0.3 & 0.2 & 0.1 & 0.1 & 0.0 & 0.1 & 0.1 & 0.1 & 0.1 & 1.1 \\ 
+    \textbf{E1} & 118.8 & 601.8 & 199.2 & 158.2 & 89.1 & 73.2 & 0.0 & 0.0 & 0.0 & 0.0 & 1240.3 \\ 
+    \textbf{E2} & 124.5 & 574.8 & 179.1 & 126.3 & 76.3 & 75.0 & 0.0 & 0.0 & 0.0 & 0.0 & 1155.9 \\ 
+    \textbf{E3} & 767.0 & 4225.4 & 1498.2 & 946.0 & 538.0 & 468.6 & 0.0 & 0.0 & 0.0 & 0.0 & 8443.1 \\ 
+    \textbf{E4} & 298.3 & 1728.2 & 669.0 & 471.1 & 246.3 & 190.9 & 0.0 & 0.0 & 0.0 & 0.0 & 3603.9 \\ \hline
+    \textbf{Dj, 2024} & 2580.9 & 13744.7 & 4723.6 & 3208.8 & 1743.5 & 1616.2 & 1698.8 & 787.8 & 2481.1 & 1962.6 & 34548.0 \\
+    \end{tabular}}
+    \caption{Matriz Origen-Destino con método global}
+    \label{table:global}
+  \end{table}
+  
+  
 
 Como se puede apreciar, la matriz obtenida no es precisa respecto a la original, ya que los vectores de origen-destino no concuerdan con los obtenidos en la encuesta.
 
 
 \subsection{Implementación del Método Furness}
-Para poder mejorar la presición de la matriz obtenida (Tabla \ref{table:results_zones}), se implementó el método Furness, a continuación se muestra la matriz obtenida:
-\begin{table}[h!]
+Para poder mejorar la presición de la matriz obtenida (Tabla \ref{table:global}), se implementó el método Furness, a continuación se muestra la matriz obtenida:
+\begin{table}[H]
     \centering
     \resizebox{\textwidth}{!}{%
-    \begin{tabular}{c|ccccccccccc}
+    \begin{tabular}{c|ccccccccccc}    
     \textbf{Zona O\textbackslash D} & \textbf{301} & \textbf{302} & \textbf{308} & \textbf{314} & \textbf{316} & \textbf{318} & \textbf{E1} & \textbf{E2} & \textbf{E3} & \textbf{E4} & \textbf{Oi,2024} \\ \hline
-    \textbf{301} & 357.39 & 228.48 & 207.35 & 0.25 & 58.10 & 0.13 & 669.68 & 773.91 & 2567.63 & 2874.08 & 7737.00 \\ 
-    \textbf{302} & 106.28 & 535.61 & 135.24 & 0.63 & 140.87 & 0.10 & 1154.28 & 775.35 & 6235.52 & 6005.13 & 15089.00 \\ 
-    \textbf{308} & 42.64 & 59.78 & 123.21 & 0.26 & 35.58 & 0.01 & 382.63 & 191.11 & 3155.20 & 2641.57 & 6632.00 \\ 
-    \textbf{314} & 5.14 & 27.75 & 26.05 & 0.33 & 20.13 & 0.00 & 260.86 & 103.99 & 824.66 & 1039.08 & 2308.00 \\ 
-    \textbf{316} & 20.53 & 107.03 & 61.16 & 0.35 & 63.14 & 0.01 & 478.34 & 283.50 & 1544.91 & 1866.02 & 4425.00 \\ 
-    \textbf{318} & 81.94 & 134.57 & 43.40 & 0.10 & 22.35 & 0.08 & 245.21 & 209.14 & 912.08 & 1135.13 & 2784.00 \\ 
-    \textbf{E1} & 258.69 & 958.59 & 718.82 & 4.93 & 522.82 & 0.15 & 0.00 & 0.00 & 0.00 & 0.00 & 2464.00 \\ 
-    \textbf{E2} & 166.54 & 358.69 & 199.99 & 1.10 & 172.61 & 0.07 & 0.00 & 0.00 & 0.00 & 0.00 & 899.00 \\ 
-    \textbf{E3} & 218.60 & 1141.31 & 1306.37 & 3.44 & 372.15 & 0.12 & 0.00 & 0.00 & 0.00 & 0.00 & 3042.00 \\ 
-    \textbf{E4} & 486.25 & 2184.19 & 2173.40 & 8.61 & 893.25 & 0.31 & 0.00 & 0.00 & 0.00 & 0.00 & 5746.00 \\ \hline
-    \textbf{Dj, 2024} & 1744.00 & 5736.00 & 4995.00 & 20.00 & 2301.00 & 1.00 & 3191.00 & 2337.00 & 15240.00 & 15561.00 & 51126.00 \\
-    \end{tabular}%
-    }
-    \caption{Tabla de resultados entre zonas}
-    \label{table:results_zones1}
-\end{table}
+    \textbf{301} & 31.4 & 147.7 & 51.5 & 25.1 & 45.4 & 16.4 & 314.3 & 128.9 & 361.2 & 622.1 & 1744.0 \\ 
+    \textbf{302} & 251.1 & 341.0 & 204.0 & 63.0 & 106.8 & 72.1 & 961.5 & 359.3 & 1201.4 & 2175.7 & 5736.0 \\ 
+    \textbf{308} & 173.9 & 405.0 & 101.3 & 43.8 & 91.7 & 79.5 & 768.2 & 270.2 & 1028.3 & 2033.1 & 4995.0 \\ 
+    \textbf{314} & 0.9 & 1.4 & 0.5 & 0.1 & 0.3 & 0.3 & 3.5 & 1.1 & 3.7 & 8.2 & 20.0 \\ 
+    \textbf{316} & 103.8 & 143.6 & 62.1 & 16.4 & 28.7 & 36.9 & 416.4 & 139.4 & 447.2 & 906.6 & 2301.0 \\ 
+    \textbf{318} & 0.0 & 0.1 & 0.0 & 0.0 & 0.0 & 0.0 & 0.2 & 0.1 & 0.2 & 0.4 & 1.0 \\ 
+    \textbf{E1} & 671.5 & 1208.0 & 486.2 & 197.1 & 389.2 & 238.9 & 0.0 & 0.0 & 0.0 & 0.0 & 3191.0 \\ 
+    \textbf{E2} & 542.8 & 889.9 & 337.2 & 121.4 & 256.9 & 188.8 & 0.0 & 0.0 & 0.0 & 0.0 & 2337.0 \\ 
+    \textbf{E3} & 3069.2 & 6003.3 & 2588.5 & 834.4 & 1662.1 & 1082.5 & 0.0 & 0.0 & 0.0 & 0.0 & 15240.0 \\ 
+    \textbf{E4} & 2892.2 & 5949.0 & 2800.6 & 1006.7 & 1844.0 & 1068.5 & 0.0 & 0.0 & 0.0 & 0.0 & 15561.0 \\ \hline
+    \textbf{Dj, 2024} & 7737.0 & 15089.0 & 6632.0 & 2308.0 & 4425.0 & 2784.0 & 2464.0 & 899.0 & 3042.0 & 5746.0 & 51126.0 \\
+    \end{tabular}}
+    \caption{Matriz Origen-Destino con método Furness}
+    \label{table:furness}
+  \end{table}
+  
 Como se puede observar, los vectores son más precisos respecto a los obtenidos en la encuesta.
 
 Luego, se calculó el error cuadrático medio respecto a la original con el siguiente código:
@@ -185,32 +186,32 @@ Donde:
     \item $df1\_1$ es la matriz original.
 \end{itemize}
 
-El error que se obtuvo fue de 835858.753, por lo que, para minimizar el error, se tiene que modificar el k
+El error que se obtuvo fue de 350710.81, por lo que, para minimizar el error, se tiene que modificar el k
 
 \subsection{Calibración de la Matriz Origen-Destino con el Modelo Gravitacional}
 Para poder obtener el k óptimo, se iteró sobre distintos valores de k, obteniendo un error mínimo con un k de 0.001 y un alpha de 0.00011. A continuación, se muestra la matriz obtenida:
-
-\begin{table}[h!]
+error: 345361.66
+\begin{table}[H]
     \centering
     \resizebox{\textwidth}{!}{%
-    \begin{tabular}{c|ccccccccccc}
+    \begin{tabular}{c|ccccccccccc}    
     \textbf{Zona O\textbackslash D} & \textbf{301} & \textbf{302} & \textbf{308} & \textbf{314} & \textbf{316} & \textbf{318} & \textbf{E1} & \textbf{E2} & \textbf{E3} & \textbf{E4} & \textbf{Oi,2024} \\ \hline
-    \textbf{301} & 121.75 & 257.92 & 205.84 & 0.53 & 83.72 & 0.07 & 676.48 & 658.58 & 2830.41 & 2901.70 & 7737.00 \\ 
-    \textbf{302} & 142.42 & 455.94 & 251.14 & 1.02 & 151.92 & 0.09 & 1180.01 & 835.93 & 6111.53 & 5959.00 & 15089.00 \\ 
-    \textbf{308} & 53.59 & 118.41 & 120.65 & 0.39 & 50.48 & 0.03 & 433.44 & 256.84 & 2871.15 & 2727.03 & 6632.00 \\ 
-    \textbf{314} & 12.94 & 44.70 & 36.38 & 0.17 & 19.44 & 0.01 & 227.30 & 113.41 & 830.96 & 1022.68 & 2308.00 \\ 
-    \textbf{316} & 34.69 & 113.99 & 80.33 & 0.33 & 45.43 & 0.02 & 430.93 & 271.43 & 1599.58 & 1848.27 & 4425.00 \\ 
-    \textbf{318} & 41.83 & 105.54 & 63.29 & 0.20 & 30.78 & 0.03 & 242.85 & 200.79 & 996.36 & 1102.33 & 2784.00 \\ 
-    \textbf{E1} & 301.52 & 952.47 & 742.06 & 4.18 & 463.59 & 0.17 & 0.00 & 0.00 & 0.00 & 0.00 & 2464.00 \\ 
-    \textbf{E2} & 155.03 & 356.35 & 232.23 & 1.10 & 154.21 & 0.07 & 0.00 & 0.00 & 0.00 & 0.00 & 899.00 \\ 
-    \textbf{E3} & 298.73 & 1168.09 & 1163.94 & 3.62 & 407.46 & 0.17 & 0.00 & 0.00 & 0.00 & 0.00 & 3042.00 \\ 
-    \textbf{E4} & 581.50 & 2162.59 & 2099.13 & 8.45 & 893.97 & 0.35 & 0.00 & 0.00 & 0.00 & 0.00 & 5746.00 \\ \hline
-    \textbf{Dj, 2024} & 1744.00 & 5736.00 & 4995.00 & 20.00 & 2301.00 & 1.00 & 3191.00 & 2337.00 & 15240.00 & 15561.00 & 51126.00 \\
-    \end{tabular}%
-    }
-    \caption{Tabla de resultados entre zonas}
-    \label{table:results_zones3}
-\end{table}
+    \textbf{301} & 121.5 & 142.5 & 53.6 & 13.0 & 34.7 & 41.8 & 301.6 & 155.0 & 298.9 & 581.6 & 1744.0 \\ 
+    \textbf{302} & 257.9 & 455.7 & 118.5 & 44.7 & 114.0 & 105.5 & 952.5 & 356.4 & 1168.2 & 2162.6 & 5736.0 \\ 
+    \textbf{308} & 205.8 & 251.4 & 120.6 & 36.4 & 80.4 & 63.3 & 742.1 & 232.3 & 1163.7 & 2099.0 & 4995.0 \\ 
+    \textbf{314} & 0.5 & 1.0 & 0.4 & 0.2 & 0.3 & 0.2 & 4.2 & 1.1 & 3.6 & 8.5 & 20.0 \\ 
+    \textbf{316} & 83.8 & 151.9 & 50.5 & 19.4 & 45.4 & 30.8 & 463.5 & 154.2 & 407.5 & 894.0 & 2301.0 \\ 
+    \textbf{318} & 0.1 & 0.1 & 0.0 & 0.0 & 0.0 & 0.0 & 0.2 & 0.1 & 0.2 & 0.3 & 1.0 \\ 
+    \textbf{E1} & 676.5 & 1180.1 & 433.5 & 227.2 & 430.8 & 242.8 & 0.0 & 0.0 & 0.0 & 0.0 & 3191.0 \\ 
+    \textbf{E2} & 658.3 & 836.0 & 257.0 & 113.4 & 271.4 & 200.8 & 0.0 & 0.0 & 0.0 & 0.0 & 2337.0 \\ 
+    \textbf{E3} & 2830.9 & 6111.3 & 2870.6 & 831.0 & 1599.7 & 996.5 & 0.0 & 0.0 & 0.0 & 0.0 & 15240.0 \\ 
+    \textbf{E4} & 2901.7 & 5958.9 & 2727.2 & 1022.6 & 1848.3 & 1102.3 & 0.0 & 0.0 & 0.0 & 0.0 & 15561.0 \\ \hline
+    \textbf{Dj, 2024} & 7737.0 & 15089.0 & 6632.0 & 2308.0 & 4425.0 & 2784.0 & 2464.0 & 899.0 & 3042.0 & 5746.0 & 51126.0 \\
+    \end{tabular}}
+    \caption{Matriz Origen-Destino calibrada con método Furness}
+    \label{table:calibrada}
+  \end{table}
+  
 
     
 

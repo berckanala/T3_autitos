@@ -126,7 +126,7 @@ resultado_df.loc['Dj, 2024'] = total_column
 
 # Parámetros dados
 beta = 0.2176
-k=1
+k=0.001
 Tij_list = []
 O = pd.DataFrame(data4).set_index("Zona").loc["Oi,2012"].values
 D = pd.DataFrame(data4).set_index("Zona").loc["Dj,2012"].values

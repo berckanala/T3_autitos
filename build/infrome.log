@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.19)  23 SEP 2024 18:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.19)  24 SEP 2024 07:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -524,15 +524,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has
                                                   \__shipout_drop_firstpage_...
 l.104 \subsection
                  {Matriz Origen-Destino con el Modelo Gravitacional} <./fotos/mapa.png>]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 142.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 141.
  (C:\Users\A\Desktop\Programar\miketex\tex/latex/base\omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 142.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 141.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -545,8 +542,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.175 L
-       uego, se calculó el error cuadrático medio respecto a la original c...]
+l.172   \end{table}
+                   ]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -563,13 +560,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.217 \newpage
-              
-pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.217 \newpage
-              ]
+l.214 
+      ]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -578,25 +570,38 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [4
+pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.218 \newpage
+              ]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[5
 pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.283 \end{document}
+l.284 \end{document}
                     
 pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.283 \end{document}
+l.284 \end{document}
                     
 pdfTeX warning (ext4): destination with the same identifier (name{table.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.283 \end{document}
+l.284 \end{document}
                     
 pdfTeX warning (ext4): destination with the same identifier (name{table.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.283 \end{document}
+l.284 \end{document}
                     ] (c:\Users\A\Desktop\Uandes\8vo_semestre\Sistemas de transportes\T3_autitos\build\infrome.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
@@ -609,17 +614,17 @@ Package rerunfilecheck Info: File `infrome.out' has not changed.
 (rerunfilecheck)             Checksum: EC72243CFAFDEF27C3F43E36A33F900D;1321.
  ) 
 Here is how much of TeX's memory you used:
- 16694 strings out of 474486
- 259193 string characters out of 5747519
- 1975542 words of memory out of 5000000
- 38699 multiletter control sequences out of 15000+600000
- 565853 words of font info for 87 fonts, out of 8000000 for 9000
+ 16697 strings out of 474486
+ 259211 string characters out of 5747519
+ 1971542 words of memory out of 5000000
+ 38703 multiletter control sequences out of 15000+600000
+ 565804 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,79p,1080b,1997s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,1080b,1997s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/A/Desktop/Programar/miketex/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/A/Desktop/Programar/miketex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/A/Desktop/Programar/miketex/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/A/Desktop/Programar/miketex/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/A/Desktop/Programar/miketex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/A/Desktop/Programar/miketex/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/A/Desktop/Programar/miketex/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/A/Desktop/Programar/miketex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/A/Desktop/Programar/miketex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/A/Desktop/Programar/miketex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/A/Desktop/Programar/miketex/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/A/Desktop/Programar/miketex/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "c:\Users\A\Desktop\Uandes\8vo_semestre\Sistemas de transportes\T3_autitos\build\infrome.pdf" (5 pages, 306042 bytes).
+Output written on "c:\Users\A\Desktop\Uandes\8vo_semestre\Sistemas de transportes\T3_autitos\build\infrome.pdf" (6 pages, 307295 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
+ 140 PDF objects out of 1000 (max. 8388607)
+ 23 named destinations out of 1000 (max. 500000)
  21558 words of extra memory for PDF output out of 24883 (max. 10000000)
 
