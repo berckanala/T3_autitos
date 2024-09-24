@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1727217527.18224 "c:/Users/pedro/OneDrive/Escritorio/Semestre VIII/Sistemas de Transporte/T3/T3_autitos/informe.tex" "informe.pdf" "informe" 1727217528.3215 0
+["pdflatex"] 1727217614.29387 "c:/Users/pedro/OneDrive/Escritorio/Semestre VIII/Sistemas de Transporte/T3/T3_autitos/informe.tex" "informe.pdf" "informe" 1727217615.45671 0
   "C:/Users/pedro/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1727063478 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/pedro/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1723153580 24265332 a4623d99dbd220d0e817d27477adcb5a ""
   "C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -110,11 +110,11 @@
   "C:/Users/pedro/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/pedro/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/pedro/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/pedro/OneDrive/Escritorio/Semestre VIII/Sistemas de Transporte/T3/T3_autitos/informe.tex" 1727217526 24129 c37d32b24dc6e65c5ede62f6489b495a ""
+  "c:/Users/pedro/OneDrive/Escritorio/Semestre VIII/Sistemas de Transporte/T3/T3_autitos/informe.tex" 1727217614 24746 c159a1a9237b9540bf9135a581ef6418 ""
   "fotos/mapa.png" 1727193523 193416 3ae7bec6987cb520a01ae5e9f781f7e2 ""
-  "informe.aux" 1727217528 3850 00dfb2e3e1e3f98b97d04c5cf814263f "pdflatex"
-  "informe.out" 1727217528 1712 3f27529d97531da95d3ab264e216aeb6 "pdflatex"
-  "informe.tex" 1727217526 24129 c37d32b24dc6e65c5ede62f6489b495a ""
+  "informe.aux" 1727217615 3850 ddc92b8bb8b11350890615ec7aff05ff "pdflatex"
+  "informe.out" 1727217615 1712 3f27529d97531da95d3ab264e216aeb6 "pdflatex"
+  "informe.tex" 1727217614 24746 c159a1a9237b9540bf9135a581ef6418 ""
   (generated)
   "informe.aux"
   "informe.log"

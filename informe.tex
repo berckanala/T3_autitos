@@ -154,6 +154,7 @@ Luego de aplicar la ecuación \ref{eq:alpha}, se obtuvo un  $\alpha$ igual a $3.
     \label{table:global}
   \end{table}
 
+  \noindent La Tabla \ref{table:global} presenta la distribución inicial de viajes entre zonas utilizando el modelo gravitacional. Esta distribución ofrece una primera aproximación de los flujos de viajes, pero aún requiere ajustes adicionales para que refleje con precisión los totales proyectados para el año 2024.
 
 \subsection{Implementación del Método Furness}
 Para poder mejorar la presición de la matriz obtenida (Tabla \ref{table:global}), se implementó el método Furness, este método es un algoritmo iterativo que equilibra la matriz de viajes para que las sumas de sus columnas y filas coincidan con los totales proyectados, manteniendo la distribución proporcional de los viajes según una matriz base. A continuación se muestra la matriz obtenida:
@@ -177,6 +178,8 @@ Para poder mejorar la presición de la matriz obtenida (Tabla \ref{table:global}
     \caption{Matriz Origen-Destino con método Furness}
     \label{table:furness}
   \end{table}
+
+  \noindent La Tabla \ref{table:furness} muestra la distribución de viajes ajustada utilizando el método de Furness. Este ajuste garantiza que los totales de viajes coincidan con las proyecciones para el año 2024, proporcionando una estimación más precisa de la movilidad entre zonas.
 
 \subsubsection{Error Cuadrático Medio}
 Luego, se calculó el error cuadrático medio respecto a la original con el siguiente código:
