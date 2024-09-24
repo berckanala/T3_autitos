@@ -86,7 +86,7 @@
 
 \section{Introducción}
 
-El flujo de vehículos en hora punta de la mañana en San Carlos de Apoquindo es un problema significativo, ya que esta zona, además de ser un barrio residencial, se caracteriza por tener una alta concentración de colegios y universidades. Por lo tanto, el tráfico matutino afecta tanto a los residentes como a los estudiantes que ingresan a esta área. Para poder tomar decisiones respecto al flujo vehicular, no solo en San Carlos de Apoquindo, sino en todo Santiago, se realiza periódicamente la encuesta origen-destino, la cual permite conocer la cantidad de viajes que se realizan en la ciudad y su distribución.
+El flujo de vehículos en hora punta de la mañana en San Carlos de Apoquindo es un problema significativo, ya que esta zona, además de ser un barrio residencial, se caracteriza por tener una alta concentración de colegios y universidades. Por lo tanto, el tráfico matutino afecta tanto a los residentes que salen como a los estudiantes que ingresan a esta área. Para poder tomar decisiones respecto al flujo vehicular, no solo en San Carlos de Apoquindo, sino en todo Santiago, se realiza periódicamente la encuesta origen-destino, la cual permite conocer la cantidad de viajes que se realizan en la ciudad y su distribución.
 
 Con esta información, se pueden generar modelos y tomar decisiones, las cuales optimicen las rutas de las personas, disminuyendo el tráfico y el tiempo de viaje. Por esta razón, es importante contar con una matriz origen-destino actualizada y precisa, la cual permita realizar análisis y proyecciones de la distribución de viajes en la ciudad. A continuación, se presenta la figura \ref{fig:mapa}, la cual muestra la zonificación de una parte de Las Condes enfocada en San Carlos de Apoquindo. 
 
@@ -97,7 +97,7 @@ Con esta información, se pueden generar modelos y tomar decisiones, las cuales 
     \label{fig:mapa}
 \end{figure}
 
-Para esta tarea, se generarán 3 matrices origen-destino en base a esta zonificación mediante un código Python: una utilizando el método Furness o biproporcional, con datos de los vectores origen-destino de 2024, otra a partir de una matriz de costos, como la distancia promedio de viaje, y el modelo gravitacional. Posteriormente, se calibrará la matriz con el modelo gravitacional y se compararán los resultados obtenidos con un error cuadrático medio respecto a la matriz original. Finalmente, a la matriz calibrada se le aplicará el método de Furness para obtener una matriz de viajes.
+Para esta tarea, se generarán 3 matrices origen-destino en base a esta zonificación mediante un código Python: La primera ocupando un modelo gravitacional con matriz de costos, luego se le aplicará el método de Furness con vectores del 2024. Finalmente, se calibrará la matriz minimizando el error cuadrático medio y se compararán los resultados obtenidos con la matriz original.
 
 
 
