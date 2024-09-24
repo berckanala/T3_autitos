@@ -97,7 +97,7 @@ Con esta información, se pueden generar modelos y tomar decisiones, las cuales 
     \label{fig:mapa}
 \end{figure}
 
-Para esta tarea, se generarán 3 matrices origen-destino en base a esta zonificación mediante un código Python: La primera ocupando un modelo gravitacional con matriz de costos, luego se le aplicará el método de Furness con vectores del 2024. Finalmente, se calibrará la matriz minimizando el error cuadrático medio y se compararán los resultados obtenidos con la matriz original.
+Para esta tarea, se generarán 3 matrices origen-destino en base a esta zonificación mediante un código Python: La primera ocupando un modelo gravitacional con una matriz de costos, como distancia de viaje promedio, luego se le aplicará el método de Furness con vectores del 2024. Finalmente, se calibrará la matriz minimizando el error cuadrático medio y se compararán los resultados obtenidos.
 
 
 
@@ -154,10 +154,6 @@ Luego de aplicar la ecuación \ref{eq:alpha}, se obtuvo un  $\alpha$ igual a $3.
     \label{table:global}
   \end{table}
   
-  
-
-Como se puede apreciar, la matriz obtenida no es precisa respecto a la original, ya que los vectores de origen-destino no concuerdan con los obtenidos en la encuesta.
-
 
 \subsection{Implementación del Método Furness}
 Para poder mejorar la presición de la matriz obtenida (Tabla \ref{table:global}), se implementó el método Furness, este método es un algoritmo iterativo que equilibra la matriz de viajes para que las sumas de sus columnas y filas coincidan con los totales proyectados, manteniendo la distribución proporcional de los viajes según una matriz base. A continuación se muestra la matriz obtenida:
@@ -181,9 +177,6 @@ Para poder mejorar la presición de la matriz obtenida (Tabla \ref{table:global}
     \caption{Matriz Origen-Destino con método Furness}
     \label{table:furness}
   \end{table}
-  
-Como se puede observar, los vectores son más precisos respecto a los obtenidos en la encuesta.
-
 
 \subsubsection{Error Cuadrático Medio}
 Luego, se calculó el error cuadrático medio respecto a la original con el siguiente código:
@@ -202,7 +195,7 @@ Donde:
 El error que se obtuvo fue de 350710.81, por lo que, para minimizar el error, se tiene que modificar el k.
 
 \subsection{Calibración de la Matriz Origen-Destino con el Modelo Gravitacional}
-Para determinar el valor óptimo de \( k \), se realizaron iteraciones sobre diferentes valores de \( k \), desde 0.001 hasta 10, con incrementos de 0.001, para luego aplicar el error cuadrático \ref{lst:code} hasta encontrar el mínimo. El error mínimo se obtuvo con un \( k \) de 0.001 y un \( \alpha \) de 0.00011, resultando en un error de 345361.66. A continuación, se presenta la matriz resultante:
+Para determinar el valor óptimo de \( k \), se realizaron iteraciones sobre diferentes valores de \( k \), desde 0.001 hasta 10, con incrementos de 0.001, para luego aplicar el error cuadrático \ref{lst:code} hasta encontrar el mínimo. El error mínimo se obtuvo con un \( k \) de 0.001 y un \( \alpha \) de 0.00011, resultando en un error de 345361.66. A continuación, se presenta las matrices resultantes:
 
 \begin{table}[H]
     \centering
@@ -249,7 +242,7 @@ Para determinar el valor óptimo de \( k \), se realizaron iteraciones sobre dif
   
 \subsection{Discusiones}
 
-Luego de aplicar el método de Furness, la matriz se ajusta para que las sumas de las filas y columnas coincidan con los totales proyectados. Esto genera cambios en la matriz, y se observa en las Tablas \ref{table:global} y \ref{table:furness} que las zonas E1, E2, E3 y E4 presentan las mayores diferencias respecto a la matriz original. Esto se debe a que, al ser un método iterativo, es necesario ajustar la matriz para cumplir las restricciones deseadas. Además, al cambiar el valor de $k$, se afectan otras variables como $\alpha$, lo que genera cambios en la función de costos. Un valor de $k$ bajo genera mayor atracción hacia las zonas más cercanas o con un menor costo. En el caso de las zonas mencionadas, E1, E2, E3 y E4, tuvieron que ajustarse significativamente para alinearse con los vectores de destino y origen de 2024. Además, los valores de generación de viajes del cuadrante de los 300 en la Tabla 3 son muy altos y difieren de lo esperado para 2024, por lo que, al aplicar el método de Furness, estos valores disminuyen notablemente y se logran adaptar a lo esperado para 2024, generando una matriz más coherente. Al comparar la matriz original con la final (Tablas \ref{table:data_matrix} y \ref{table:calibrada} respectivamente), se observa que las zonas E1, E2, E3 y E4 siguen siendo las que más difieren respecto a las otras zonas. Esto puede deberse a que, como se mencionó antes, el método de Furness y el modelo gravitacional son ajustes para lograr una representación coherente, pero pueden existir diferencias con la realidad debido a factores que no captura este tipo de modelos.\\
+Luego de aplicar el método de Furness, la matriz se ajusta para que las sumas de las filas y columnas coincidan con los totales proyectados. Esto genera cambios en la matriz, y se observa en las Tablas \ref{table:calibrada gravitacional} y \ref{table:calibrada} que los viajes entre zonas internas bajan de forma significativa, mientras que los viajes de zonas externas a internas o viceversa aumentan hasta 10 ordenes de magnitud. Esto se debe a que, al ser un método iterativo, es necesario ajustar la matriz para cumplir las restricciones deseadas. Además, al cambiar el valor de $k$, se afectan otras variables como $\alpha$, lo que genera cambios en la función de costos. Un valor de $k$ bajo genera mayor atracción hacia las zonas más cercanas o con un menor costo. En el caso de las zonas mencionadas, E1, E2, E3 y E4, tuvieron que ajustarse significativamente para alinearse con los vectores de destino y origen de 2024. Además, los valores de generación de viajes del cuadrante de los 300 en la Tabla 3 son muy altos y difieren de lo esperado para 2024, por lo que, al aplicar el método de Furness, estos valores disminuyen notablemente y se logran adaptar a lo esperado para 2024, generando una matriz más coherente. Al comparar la matriz original con la final (Tablas \ref{table:data_matrix} y \ref{table:calibrada} respectivamente), se observa que las zonas E1, E2, E3 y E4 siguen siendo las que más difieren respecto a las otras zonas. Esto puede deberse a que, como se mencionó antes, el método de Furness y el modelo gravitacional son ajustes para lograr una representación coherente, pero pueden existir diferencias con la realidad debido a factores que no captura este tipo de modelos.\\
 
 Con respecto a las limitaciones que tiene el metodo de Furness y el modelo gravitacional se puede mencionar que este modelo solo considera ciertos impulsos sobre los viajes como lo son el costo y el tamaño de la zona de origen y destino, lo cual puede no captar otros factores importantes como la congestion, cambios de trasporte publico o privado, entre otros. Ademas, el metodo de Furness ajusta de manera proporcional, lo que puede significar que no se refleje con precision los patrones de viaje o los cambios en este. Luego agregar que los parametros como k, pueden variar en la zona, por lo que no son del todo correctas en cada ocasion. \\
 
