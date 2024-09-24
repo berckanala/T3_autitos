@@ -102,24 +102,33 @@ Para esta tarea, se generarán 3 matrices origen-destino en base a esta zonifica
 \section{Resultados y Discusiones}
 Los cálculos se realizaron en Python, utilizando las librerías Pandas y Numpy. El código se encuentra en el repositorio de GitHub \href{https://github.com/berckanala/T3_autitos/blob/main/t3.py}{Código}
 \subsection{Matriz Origen-Destino con el Modelo Gravitacional}
-Para poder generar la Matriz Origen-Destino con el modelo gravitacional, se utilizó la matriz de costos entre zonas (Tabla \ref{table:costs_zones}) y los vectores de origen y destino de 2012 (Tabla \ref{table:oi_dj_2012}). Luego, con la siguiente ecuación: 
+Primero, se generó una Matriz Origen-Destino utilizando el modelo gravitacional, aplicando la ecuación \ref{eq} proporcionada junto con la matriz de costos entre zonas (Tabla \ref{table:costs_zones}) y los vectores de origen y destino de 2012 (Tabla \ref{table:oi_dj_2012}).
 
 \begin{equation}
     T_{ij} = \alpha \cdot O_{i,2012} \cdot D_{j,2012} \cdot C_{ij}^k \cdot e^{-\beta \cdot C_{ij}}
+    \label{eq}
 \end{equation}
 
 Donde:
 \begin{itemize}
-    \item $T_{ij}$ es la cantidad de viajes entre la zona i y la zona j.
-    \item $O_{i,2012}$ es la cantidad de viajes de origen en la zona i.
-    \item $D_{j,2012}$ es la cantidad de viajes de destino en la zona j.
-    \item $C_{ij}$ es el costo entre la zona i y la zona j.
-    \item $\alpha$ y k son parámetros a calibrar.
-    \item $\beta$ es un parámetro equivalente a 0.2176
+    \item $T_{ij}$ es la cantidad de viajes entre la zona $i$ y la zona $j$.
+    \item $O_{i,2012}$ es la cantidad de viajes de origen en la zona $i$.
+    \item $D_{j,2012}$ es la cantidad de viajes de destino en la zona $j$.
+    \item $C_{ij}$ es el costo entre la zona $i$ y la zona $j$.
+    \item $\alpha$ y $k$ son parámetros a calibrar.
+    \item $\beta$ es un parámetro equivalente a 0.2176.
 \end{itemize}
 
 
-Luego de calcular la matriz de viajes, con un $\alpha$ igual a $3.249 \cdot 10^{-5}$ y un k igual a 1 se obtuvo la siguiente matriz:
+
+Con todos los valores se procede a calcular el parámetro $\alpha$ con un k igual a 1. Para ello, se ocupó la siguiente ecuación:
+
+\begin{equation}
+    \alpha = \frac{\sum_i O_{i,2012}}{\sum_i \sum_j O_{i,2012} \cdot D_{j,2012} \cdot C_{ij}^k \cdot e^{-\beta \cdot C_{ij}}}
+    \label{eq:alpha}
+\end{equation}
+
+Luego de aplicar la ecuación \ref{eq:alpha}, se obtuvo un  $\alpha$ igual a $3.249 \cdot 10^{-5}$, con el cual se procedió a calcular la matriz de viajes que se muestra a continuación:
 
 
 \begin{table}[H]
@@ -149,7 +158,7 @@ Como se puede apreciar, la matriz obtenida no es precisa respecto a la original,
 
 
 \subsection{Implementación del Método Furness}
-Para poder mejorar la presición de la matriz obtenida (Tabla \ref{table:global}), se implementó el método Furness, a continuación se muestra la matriz obtenida:
+Para poder mejorar la presición de la matriz obtenida (Tabla \ref{table:global}), se implementó el método Furness, este método es un algoritmo iterativo que equilibra la matriz de viajes para que las sumas de sus columnas y filas coincidan con los totales proyectados, manteniendo la distribución proporcional de los viajes según una matriz base. A continuación se muestra la matriz obtenida:
 \begin{table}[H]
     \centering
     \resizebox{\textwidth}{!}{%
@@ -173,24 +182,28 @@ Para poder mejorar la presición de la matriz obtenida (Tabla \ref{table:global}
   
 Como se puede observar, los vectores son más precisos respecto a los obtenidos en la encuesta.
 
+
+\subsubsection{Error Cuadrático Medio}
 Luego, se calculó el error cuadrático medio respecto a la original con el siguiente código:
 
 
-\begin{lstlisting}
+\begin{lstlisting}[language=Python, label={lst:code}]
     mse = np.mean((Tij_df - df1_1) ** 2)
 \end{lstlisting}
 
 Donde:
 \begin{itemize}
-    \item $Tij\_df$ es la matriz de viajes obtenida.
-    \item $df1\_1$ es la matriz original.
+    \item $Tij\_df$ es la matriz de viajes obtenida. (Tabla \ref{table:furness})
+    \item $df1\_1$ es la matriz original. (Tabla \ref{table:data_matrix})
 \end{itemize}
 
-El error que se obtuvo fue de 350710.81, por lo que, para minimizar el error, se tiene que modificar el k
+El error que se obtuvo fue de 350710.81, por lo que, para minimizar el error, se tiene que modificar el k.
 
 \subsection{Calibración de la Matriz Origen-Destino con el Modelo Gravitacional}
-Para poder obtener el k óptimo, se iteró sobre distintos valores de k, obteniendo un error mínimo con un k de 0.001 y un alpha de 0.00011. A continuación, se muestra la matriz obtenida:
-error: 345361.66
+Para determinar el valor óptimo de \( k \), se realizaron iteraciones sobre diferentes valores de \( k \), desde 0.001 hasta 10, con incrementos de 0.001, para luego aplicar el error cuadrático \ref{lst:code} hasta encontrar el mínimo. El error mínimo se obtuvo con un \( k \) de 0.001 y un \( \alpha \) de 0.00011, resultando en un error de 345361.66. A continuación, se presenta la matriz resultante:
+
+
+
 \begin{table}[H]
     \centering
     \resizebox{\textwidth}{!}{%

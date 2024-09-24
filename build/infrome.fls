@@ -232,6 +232,9 @@ INPUT C:\Users\A\Desktop\Programar\miketex\tex\latex\base\omscmr.fd
 INPUT C:\Users\A\Desktop\Programar\miketex\tex\latex\base\omscmr.fd
 INPUT C:\Users\A\Desktop\Programar\miketex\tex\latex\base\omscmr.fd
 INPUT C:\Users\A\Desktop\Programar\miketex\fonts\tfm\public\cm\cmbsy10.tfm
+INPUT C:\Users\A\Desktop\Programar\miketex\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\A\Desktop\Programar\miketex\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\A\Desktop\Programar\miketex\tex\latex\listings\lstlang1.sty
 INPUT C:\Users\A\Desktop\Programar\miketex\fonts\tfm\public\cm\cmtt12.tfm
 INPUT C:\Users\A\Desktop\Programar\miketex\fonts\tfm\public\cm\cmtt10.tfm
 INPUT C:\Users\A\Desktop\Programar\miketex\fonts\tfm\public\cm\cmr10.tfm
@@ -242,6 +245,8 @@ INPUT C:\Users\A\Desktop\Programar\miketex\fonts\type1\public\amsfonts\cm\cmbsy1
 INPUT C:\Users\A\Desktop\Programar\miketex\fonts\type1\public\amsfonts\cm\cmbsy10.pfb
 INPUT C:\Users\A\Desktop\Programar\miketex\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\A\Desktop\Programar\miketex\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Users\A\Desktop\Programar\miketex\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Users\A\Desktop\Programar\miketex\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\A\Desktop\Programar\miketex\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Users\A\Desktop\Programar\miketex\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Users\A\Desktop\Programar\miketex\fonts\type1\public\amsfonts\cm\cmmi6.pfb
